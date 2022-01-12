@@ -54,53 +54,5 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap"
     async defer></script>
-  </body>
-<head>
-<script>
-function setCookie(cname,cvalue,exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  var user=getCookie("2021Web");
-  console.log(user);
-  if (user != "" ) {
-    alert("また見てくれてありがとう！" + user);
-  } else {
-     user = prompt("はじめまして。名前を教えてください:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 1);
-     }
-  }
-}
-  </script>
-</head>
-  <h1> Cookie の例 </h1>
-<body>
-<div style="background-color : #CCC;">
-   <input type="button" value="クッキー判定" onclick="checkCookie()">
-  <input type="button" value="クッキー削除" onclick="delCookie()">
-</div>
-
-</body>
-
+   </body>
 </html>
